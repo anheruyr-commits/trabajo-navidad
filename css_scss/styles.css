@@ -1,21 +1,210 @@
-/*Reseteo de los estilos por defecto del navegador*/
+/* Imports originales */
 @import "./base/normalize.css";
-/*Estilos a las etiquetas base de nuestro sitio web, body, a, etc.*/
 @import "./base/base.css";
-
-/*Elementos de configuración
-Colores
-
-Fuentes
-
-Reseteos que se aplican a menudo en distintos elementos, como listas o inversión de colores en el caso de tener distintos temas de color
-
-Mixins
-*/
 @import "mixins/mixins.css";
-
-/*Estilos de ayuda que se utilizan a menudo como ocultar un elemento, quitar el scroll, etc.*/
 @import "helpers/helpers.css";
-
-/*Estilos de los elementos que se repitirán en el sitio web*/
 @import "./components_blocks/_buttons.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    background-color: #ff8d0b;
+    height: 85px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header img.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(77, 77, 77);
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* --- ESTILOS HERO (IMAGEN PORTADA) --- */
+.contenedor-indice {
+    position: relative; /* Clave para contener la capa y el texto */
+    width: 100%;
+    height: 60vh; /* Ocupa el 60% de la altura de la pantalla (más moderno) */
+    min-height: 400px; /* Evita que sea muy pequeño */
+    overflow: hidden;
+}
+
+.indice {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+    display: block;
+}
+
+/* Capa oscura superpuesta (Overlay) */
+.contenedor-indice::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Negro al 50% de opacidad para que resalte el texto */
+    background-color: rgba(0, 0, 0, 0.5); 
+    pointer-events: none;
+}
+
+/* Texto y botón sobre la imagen */
+.texto-encima {
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Centrado exacto */
+    color: white;
+    text-align: center;
+    width: 90%;
+    z-index: 2; /* Por encima de la capa oscura */
+}
+
+.texto-encima h1 {
+    font-size: 3rem; /* Título grande */
+    margin: 0 0 10px 0;
+    font-family: 'Oswald', sans-serif; /* Fuente fuerte para títulos */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.texto-encima p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Botón de acción */
+.contrata {
+    background-color: #ff8d0b;
+    color: white; /* Texto blanco */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.contrata:hover {
+    background-color: #e67600;
+}
+
+
+/* --- MAPAS Y RESTO --- */
+.maps {
+    display: block;
+    margin: 0 auto;
+    width: 90%; /* Un poco más ancho */
+    max-width: 1000px;
+    height: 400px;
+}
+
+.texto-maps {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #4e4e4e;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 35px 0;
+}
+
+.footer-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 15px;
+}
+
+.footer-link:hover {
+    color: #ff8d0b; /* Color naranja al pasar el mouse */
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* --- RESPONSIVE (Móvil) --- */
+@media (max-width: 850px) {
+    .menu-toggle { display: flex; }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: #ff8d0b;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.nav-menu_visible { display: flex; }
+    .nav-link { margin: 10px 0; font-size: 22px; width: 100%; text-align: center; }
+
+    /* Ajuste texto del hero en móvil */
+    .texto-encima h1 { font-size: 2rem; }
+    .contenedor-indice { height: 50vh; }
+}
