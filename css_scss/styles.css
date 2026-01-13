@@ -1,4 +1,3 @@
-/* Imports originales */
 @import "./base/normalize.css";
 @import "./base/base.css";
 @import "mixins/mixins.css";
@@ -16,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
 header {
     background-color: #ff8d0b;
     height: 85px;
@@ -50,7 +48,6 @@ header img.logo-img {
     color: rgb(77, 77, 77);
 }
 
-/* Botón Hamburguesa */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -70,23 +67,21 @@ header img.logo-img {
     border-radius: 3px;
 }
 
-/* --- ESTILOS HERO (IMAGEN PORTADA) --- */
 .contenedor-indice {
-    position: relative; /* Clave para contener la capa y el texto */
+    position: relative;
     width: 100%;
-    height: 60vh; /* Ocupa el 60% de la altura de la pantalla (más moderno) */
-    min-height: 400px; /* Evita que sea muy pequeño */
+    height: 60vh;
+    min-height: 400px;
     overflow: hidden;
 }
 
 .indice {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+    object-fit: cover;
     display: block;
 }
 
-/* Capa oscura superpuesta (Overlay) */
 .contenedor-indice::after {
     content: "";
     position: absolute;
@@ -94,27 +89,25 @@ header img.logo-img {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Negro al 50% de opacidad para que resalte el texto */
     background-color: rgba(0, 0, 0, 0.5); 
     pointer-events: none;
 }
 
-/* Texto y botón sobre la imagen */
 .texto-encima {
     position: absolute;
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Centrado exacto */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     width: 90%;
-    z-index: 2; /* Por encima de la capa oscura */
+    z-index: 2;
 }
 
 .texto-encima h1 {
-    font-size: 3rem; /* Título grande */
+    font-size: 3rem;
     margin: 0 0 10px 0;
-    font-family: 'Oswald', sans-serif; /* Fuente fuerte para títulos */
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
@@ -124,15 +117,14 @@ header img.logo-img {
     margin-bottom: 25px;
 }
 
-/* Botón de acción */
 .contrata {
     background-color: #ff8d0b;
-    color: white; /* Texto blanco */
+    color: white;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 5px; /* Bordes ligeramente redondeados */
+    border-radius: 5px;
     display: inline-block;
     transition: background-color 0.3s;
 }
@@ -141,24 +133,32 @@ header img.logo-img {
     background-color: #e67600;
 }
 
-
-/* --- MAPAS Y RESTO --- */
 .maps {
-    display: block;
-    margin: 0 auto;
-    width: 90%; /* Un poco más ancho */
-    max-width: 1000px;
-    height: 400px;
+    background-color: #ececec;
+    padding: 20px 0;
 }
 
-.texto-maps {
+.maps h1 {
+    text-align: center;
+    color: #333;
+}
+
+.mapa {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.nuestros-entrenadores h1 {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: #4e4e4e;
     text-align: center;
@@ -175,7 +175,7 @@ footer {
 }
 
 .footer-link:hover {
-    color: #ff8d0b; /* Color naranja al pasar el mouse */
+    color: #ff8d0b;
 }
 
 footer p {
@@ -184,7 +184,6 @@ footer p {
     color: #ccc;
 }
 
-/* --- RESPONSIVE (Móvil) --- */
 @media (max-width: 850px) {
     .menu-toggle { display: flex; }
     
@@ -204,7 +203,106 @@ footer p {
     .nav-menu.nav-menu_visible { display: flex; }
     .nav-link { margin: 10px 0; font-size: 22px; width: 100%; text-align: center; }
 
-    /* Ajuste texto del hero en móvil */
     .texto-encima h1 { font-size: 2rem; }
     .contenedor-indice { height: 50vh; }
+}
+
+.entrenadores {
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    display: flex;
+}
+
+.entrenador:hover {
+    transform: translateY(-10px);
+}
+
+.entrenadores img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+}
+.entrenadores h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+.entrenadores p {
+    color: #666;
+    font-size: 1rem;
+}
+.entrenadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+}
+.entrenadores-section {
+    background-color: #f9f9f9;
+}
+
+.entrenador2 img {
+    width: 28%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+.servicios-showcase {
+    text-align: center;
+    background-color: #ececec;
+    padding: 20px 0;
+}
+
+.servicios-showcase h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.servicios-showcase p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.servicios img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+}
+
+.boton-servicio {
+    background-color: #ff8d0b;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.boton-servicio:hover {
+    background-color: #e67600;
 }
