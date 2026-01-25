@@ -27,4 +27,56 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Formulario de contacto
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellidos = document.getElementById('apellidos').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Mostrar mensaje de éxito
+            const successMessage = document.getElementById('successMessage');
+            successMessage.hidden = false;
+            
+            // Limpiar el formulario
+            contactForm.reset();
+            
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+                successMessage.hidden = true;
+            }, 5000);
+        });
+    }
+
+    // Galería Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
+
+    if (galleryItems && galleryItems.length) {
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightboxModal.removeAttribute('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+    }
+
+    if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.setAttribute('hidden', '');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
 });

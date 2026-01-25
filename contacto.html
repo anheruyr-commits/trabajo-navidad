@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css_scss/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="js/index.js" defer></script>
   </head>
   <header>
-    <img src="assets/img/logo.png" alt="Logo Iron Forge" class="logo-img" />
-
+<a href="index.html"
+        ><img src="assets/img/logo.png" alt="Logo Iron Forge" class="logo-img"
+      /></a>
     <button class="menu-toggle" aria-label="Abrir menú">
       <span></span>
       <span></span>
@@ -27,6 +29,69 @@
     </nav>
   </header>
   <body>
+
+    <section class="contact-section">
+      <h1>Ponte en contacto con nosotros</h1>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Información de contacto</h2>
+          
+          <div class="contact-item">
+            <h3>Teléfono</h3>
+            <p><a href="tel:+34956123456">+34 956 123 456</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Correo electrónico</h3>
+            <p><a href="mailto:info@ironforge.com">info@ironforge.com</a></p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>Redes sociales</h3>
+            <div class="social-links">
+              <a href="https://www.instagram.com/ironforge" target="_blank" class="social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/ironforge" target="_blank" class="social-link" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contactForm">
+          <h2>Formulario de contacto</h2>
+          
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="apellidos">Apellidos *</label>
+            <input type="text" id="apellidos" name="apellidos" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+          </div>
+          
+          <button type="submit" class="btn-enviar">Enviar</button>
+          
+          <div id="successMessage" class="success-message" hidden>
+            ¡Tu mensaje ha sido enviado correctamente! Nos pondremos en contacto pronto.
+          </div>
+        </form>
+      </div>
+    </section>
+
     <div class="maps">
       <h1>Donde encontrarnos</h1>
 
@@ -41,6 +106,7 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+
     <section class="faq-accordion" aria-label="Preguntas frecuentes">
       <h1>Preguntas frecuentes</h1>
 

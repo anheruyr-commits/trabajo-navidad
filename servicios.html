@@ -9,8 +9,9 @@
     <script src="js/index.js" defer></script>
   </head>
   <header>
-    <img src="assets/img/logo.png" alt="Logo Iron Forge" class="logo-img" />
-
+<a href="index.html"
+        ><img src="assets/img/logo.png" alt="Logo Iron Forge" class="logo-img"
+      /></a>
     <button class="menu-toggle" aria-label="Abrir menú">
       <span></span>
       <span></span>
@@ -19,7 +20,7 @@
 
     <nav class="nav-menu">
       <a class="nav-link" href="index.html">Inicio</a>
-      <a class="nav-link" style="color: rgb(77, 77, 77)" href="servicios.html"
+      <a class="nav-link" style="color: rgb(77, 77, 77)" href="sersvicios.html"
         >Servicios</a
       >
       <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -28,60 +29,70 @@
     </nav>
   </header>
   <body>
-    <div class="maps">
-      <h1>Donde encontrarnos</h1>
+    <section class="services-title">
+      <h1>Nuestros Servicios</h1>
+    </section>
 
-      <iframe
-        class="mapa"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.618549652789!2d-6.130654799999999!3d36.7077032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc7a269bd9c8b%3A0x74a7418f3b5fa7a4!2sALBOR%20Croft%20(Antiguas%20Bodegas%20Croft)!5e0!3m2!1ses!2ses!4v1768218757672!5m2!1ses!2ses"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-    <section class="faq-accordion" aria-label="Preguntas frecuentes">
-      <h1>Preguntas frecuentes</h1>
+    <section class="services-container">
+      <div class="services-list">
+        <div class="service-item-simple">
+          <h3>Entrenamiento Personalizado</h3>
+          <p>Programas diseñados específicamente para ti, adaptados a tus objetivos y nivel.</p>
+        </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Cuál es el horario del gimnasio?
-        </button>
-        <div class="faq-answer" hidden>
-          Nuestro horario es de lunes a viernes de 7:00 a 22:00 y sábados de
-          8:00 a 14:00. Domingos cerrado.
+        <div class="service-item-simple">
+          <h3>Clases Grupales</h3>
+          <p>HIIT, yoga, pilates, spinning y más en un ambiente motivador.</p>
+        </div>
+
+        <div class="service-item-simple">
+          <h3>Asesoramiento Nutricional</h3>
+          <p>Planes de alimentación personalizados por nutricionistas profesionales.</p>
+        </div>
+
+        <div class="service-item-simple">
+          <h3>Evaluación Física</h3>
+          <p>Análisis completo de tu estado físico para establecer un punto de partida claro.</p>
+        </div>
+
+        <div class="service-item-simple">
+          <h3>Rehabilitación y Fisioterapia</h3>
+          <p>Recuperación de lesiones con profesionales certificados.</p>
+        </div>
+
+        <div class="service-item-simple">
+          <h3>Planes de Membresía Flexibles</h3>
+          <p>Opciones mensuales, trimestrales o anuales adaptadas a tu presupuesto.</p>
+        </div>
+
+        <div class="service-item-simple">
+          <h3>Coaching Deportivo Avanzado</h3>
+          <p>Seguimiento continuo y análisis de progreso para atletas y objetivos específicos.</p>
         </div>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Ofrecen pases de un día o clases sueltas?
-        </button>
-        <div class="faq-answer" hidden>
-          Sí, disponemos de pases de día y bonos de clases. Consulta nuestras
-          tarifas en la sección de servicios o contacta para más detalles.
-        </div>
+      <div class="services-button-container">
+        <a href="contacto.html" class="services-main-btn">Más información sobre nuestros servicios</a>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Cómo puedo llegar y dónde aparcar?
-        </button>
-        <div class="faq-answer" hidden>
-          Estamos en la dirección mostrada en el mapa. Hay aparcamiento público
-          en la calle y opciones de aparcamiento en el edificio adyacente.
+    <section class="services-info">
+      <h2>¿Por qué elegir Iron Forge Fitness?</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <h4>Profesionales Certificados</h4>
+          <p>Nuestro equipo cuenta con certificaciones internacionales reconocidas en el sector.</p>
         </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Qué medidas de seguridad aplican en el gym?
-        </button>
-        <div class="faq-answer" hidden>
-          Mantenemos limpieza frecuente de equipos, gel hidroalcohólico
-          disponible y aforo controlado según normativa local.
+        <div class="info-item">
+          <h4>Equipo de Primera Calidad</h4>
+          <p>Máquinas modernas y equipamiento de última generación para tu comodidad.</p>
+        </div>
+        <div class="info-item">
+          <h4>Ambiente Motivador</h4>
+          <p>Una comunidad activa y apoyadora que te ayudará a mantener la motivación.</p>
+        </div>
+        <div class="info-item">
+          <h4>Resultados Garantizados</h4>
+          <p>Planes basados en ciencia y experiencia para asegurar tu progreso.</p>
         </div>
       </div>
     </section>
